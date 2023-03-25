@@ -102,6 +102,8 @@ class Activation(nn.Module):
             self.activation = ArgMax(**params)
         elif name == "argmax2d":
             self.activation = ArgMax(dim=1, **params)
+        elif name == "ReLU":
+            self.activation = nn.ReLU()
         elif name == "clamp":
             self.activation = Clamp(**params)
         elif callable(name):
